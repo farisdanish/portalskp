@@ -2,6 +2,7 @@
     session_start();
     session_unset();
     session_destroy();
-    header('Location: adminlogin.php');
+    echo "<script>alert('Logged out successfully!');
+			window.location='adminlogin.php';</script>";
     exit();
     ?>
