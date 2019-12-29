@@ -25,15 +25,15 @@ if (! empty($_SESSION['logged_in']))
 		</head>
 		<body>
 			<div align ="center" style="margin-top:15%">
-			<h1>ADMINISTRATOR MENU</h1>
 				<fieldset style ="width:500px" align ="center">
-					<legend> PLEASE CHOOSE </legend>
-						<table align="center">
-							<tr><td colspan = "5" align ="right"><a href ="appList.php"><button class="btn btn-success btn-sm">View Applications</button></a></td>
-							<td></td>
-
-							<td colspan = "5" align ="right"><a href ="adminlogout.php"><button class="btn btn-danger btn-sm">LOG OUT</button>
-						</table>
+					<div class="card">
+  						<div class="card-header"><font color="#000000"><b>ADMINISTRATOR MENU</b></font></div>
+  					<div class="card-body">
+    					<h5 class="card-title"><font color="#000000">Please Choose</font></h5>
+   						<a href ="appList.php"><button class="btn btn-success btn-sm">View Applications</button></a>
+						<a href ="adminlogout.php"><button class="btn btn-danger btn-sm">LOG OUT</button></a>
+  					</div>
+					</div>
 				</fieldset>		
 			</div>
 		<body>
