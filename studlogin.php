@@ -11,10 +11,8 @@
 			$num = $query -> num_rows;
     		// If result matched $myusername and $mypassword, table row must be 1 row
     		if($num == 1) {
-				
 				session_start();
-        		$_SESSION['studID'] = $studID;
-        		$_SESSION['password'] = $password;
+        		$_SESSION['logged_in'] = true;
         		header("Location: studMenu.php");
 			}else {
         		echo "<script>alert('You have entered a wrong username or password!');
@@ -25,9 +23,17 @@
 
 <!DOCTYPE html>
 <html>
+	<style>
+			body 
+			{
+			  background-image: url("background.jpg");
+			  background-repeat: no-repeat;
+			}
+	</style>
 	<head>
 		<title>Student Log In</title>
 		<link rel="stylesheet" type="text/css" href="css/loginstyle.css">
+		<link href="Bootstrap/css/bootstrap.min.css"rel="stylesheet" media="all">
 	</head>
 	<body>
 		<!-- The sidebar -->
@@ -43,8 +49,8 @@
 				
 				<form method = "POST" action ="studlogin.php">
 					<table align="center">
-						<tr><td>Student ID: </td><td><input type="text" name= "studID" required ></td></tr>
-						<tr><td>Password: </td><td><input type="password" name= "password" required ></td></tr>
+						<tr><td><font color="#FF0004">Student ID: </font></td><td><input type="text" name= "studID" required ></td></tr>
+						<tr><td><font color="#FF0004">Password: </font></td><td><input type="password" name= "password" required ></td></tr>
 						<tr><td colspan = "2" align ="right"><input type ="submit" value="Log In"></td></tr>
 					</table>
 				</form>	

@@ -32,7 +32,7 @@
 		<body>
 		
 			<div align= "center">
-			<h1 style="background-color:lightblue; font-weight: bold;" align="center">Application Details<hr></h1>
+			<h1 style="background-color:lightgreen; font-weight: bold;" align="center">Application Details<hr></h1>
 				
 			<form method="post" action="updateAppStatus.php">	
 			<table cellpadding="5">
@@ -48,30 +48,37 @@
 				<tr><td>Semester : <?php echo $row['stud_part']; ?></td><td>Benefactor Contact No. : <?php echo $row['bene_ctc']?></td></tr>
 				<tr><td>Programme Name : <?php echo $row['prog_name']; ?></td><td>Benefactor Salary : RM<?php echo $row['bene_salary']?></td></tr>
 				<tr><td>Programme Code : <?php echo $row['prog_code']; ?></td><td>Application Date : <?php echo $row['app_date']?></td></tr>
-				<tr><td></td><td>Father Status : <?php echo $row['dad_status']?></td></tr>
-				<tr><td></td><td>Father Occupation : <?php echo $row['dad_occu']?></td></tr>
-				<tr><td></td><td>Father Salary : RM<?php echo $row['dad_salary']?></td></tr>
+				<tr><td>Joined SKP before : <?php if($row['skp_vet'] == true)echo "Yes"; else echo "No";?>
+					</td><td>Father Status : <?php echo $row['dad_status']?></td></tr>
+				<tr><td><?php if($row['skp_vet'] == true){?>SKP Place : <?php echo $row['skp_place']; }else ?></td>
+					<td>Father Occupation : <?php echo $row['dad_occu']?></td></tr>
+				<tr><td><?php if($row['skp_vet'] == true){?>SKP Date : <?php echo $row['skp_date']; }else ?></td>
+					<td>Father Salary : RM<?php echo $row['dad_salary']?></td></tr>
 				<tr><td></td><td>Mother Status : <?php echo $row['mom_status']?></td></tr>
 				<tr><td></td><td>Mother Occupation : <?php echo $row['mom_occu']?></td></tr>
 				<tr><td></td><td>Mother Salary : RM<?php echo $row['mom_salary']?></td></tr>
 				<tr><td></td><td>No. of Siblings : <?php echo $row['siblings']?></td></tr>
-				<tr><td></td><td>Order Among Siblings : <?php echo $row['order_in_fam']?></td></tr>
-				<tr><td></td><td>Work Experience : <?php echo $row['work_exp']?></td></tr>
+				<tr><td>Computer Skills : <?php echo $row['comp_skills']; ?></td>
+					<td>Order Among Siblings : <?php echo $row['order_in_fam']?></td></tr>
+				<tr><td>Transport : <?php echo $row['transport']; ?></td><td>Work Experience : <?php echo $row['work_exp']?></td></tr>
 				<tr>
-					<td style="padding-bottom:30px;" align="center" colspan="2">Approve Student Application? <?php echo $row['application_status']?>
+					<td style="padding-bottom:30px;" align="center" colspan="2">Approve Student Application?
 					<select name = "application_status">
+						<option value = "IN REVIEW">IN REVIEW</option>
 						<option value = "Accepted">ACCEPTED</option>
 						<option value = "Denied">DENIED</option>
 					</select>
 					</td>
 				</tr>
 					
-				<tr><td colspan="2" align = "right"><input type = "submit" class = "btn btn-success btn sm" value="Update"></td></tr>
+				<tr><td align = "right"><input type = "submit" class = "btn btn-success btn sm" value="Update"></td>
+					
+				</tr>
 				<input type="hidden" name="id" value="<?php echo $id;?>">
 				</table>
 			</form>
 			<table name="temp" class="table table-sm table-bordered table table-striped table-hover table-condensed" align="center">
-				<tr><td align ="center"><a href ="appList.php"><button class="btn btn-danger btn-sm">BACK</button></td></tr>
+				<tr><td align ="center"><a href ="appList.php"><button class="btn btn-danger btn-sm">BACK</button></a></td></tr>
 			</table>
 		</body>
 	</html>

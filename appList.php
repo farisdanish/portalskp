@@ -22,7 +22,7 @@
 </head>
 <body>
 	<div align="center">
-		<h1 style="background-color:lightblue; font-weight: bold;" align="center">SKP APPLICATION LIST<hr></h1>
+		<h1 style="background-color:lightgreen; font-weight: bold;" align="center">SKP APPLICATION LIST<hr></h1>
 		<br>
 			<form method="post" action ="appList.php">
 				<input type="text" name="search" placeholder="Student ID">
