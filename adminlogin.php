@@ -42,11 +42,15 @@
 			<fieldset style ="width:250px" align ="left">
 				
 				<form action="adminlogin.php" method="POST">
-					<table align="center">
-						<tr><td><font color="#FFFFFF">Username&nbsp;: </font></td><td><input type="text" name= "username" required ></td></tr>
-						<tr><td><font color="#FFFFFF">Password&nbsp;: </font></td><td><input type="password" name= "password" required ></td></tr>
-						<tr><td colspan = "2" align ="right"><input type ="submit" value="Log In"></td></tr>
-					</table>
+					<div class="container">
+    					<label for="uname"><font color="#000000"><b>Username</b></font></label>
+    					<input type="text" placeholder="Enter Username" name= "username" required >
+
+    					<label for="uname"><font color="#000000"><b>Password</b></font></label>
+    					<input type="password" placeholder="Enter Password" name= "password" required >
+						<br>&nbsp;</br>
+    					<button type="submit">Login</button>
+  					</div>
 				</form>	
 			</fieldset>
 			</div>

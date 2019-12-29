@@ -41,11 +41,15 @@
 			<fieldset style ="width:250px" align ="left">
 				
 				<form method = "POST" action ="studlogin.php">
-					<table align="center">
-						<tr><td><font color="#FFFFFF">Student ID: </font></td><td><input type="text" name= "studID" required ></td></tr>
-						<tr><td><font color="#FFFFFF">Password: </font></td><td><input type="password" name= "password" required ></td></tr>
-						<tr><td colspan = "2" align ="right"><input type ="submit" value="Log In"></td></tr>
-					</table>
+					<div class="container">
+    					<label for="uname"><font color="#000000"><b>Student ID</b></font></label>
+    					<input type="text" placeholder="Enter Student ID" name= "studID" required >
+
+    					<label for="uname"><font color="#000000"><b>Password</b></font></label>
+    					<input type="password" placeholder="Enter Password" name= "password" required >
+						<br>&nbsp;</br>
+    					<button type="submit">Login</button>
+  					</div>
 				</form>	
 			</fieldset>
 			</div>
