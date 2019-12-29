@@ -23,13 +23,6 @@
 
 <!DOCTYPE html>
 <html>
-	<style>
-			body 
-			{
-			  background-image: url("background.jpg");
-			  background-repeat: no-repeat;
-			}
-	</style>
 	<head>
 		<title>Student Log In</title>
 		<link rel="stylesheet" type="text/css" href="css/loginstyle.css">
@@ -49,8 +42,8 @@
 				
 				<form method = "POST" action ="studlogin.php">
 					<table align="center">
-						<tr><td><font color="#FF0004">Student ID: </font></td><td><input type="text" name= "studID" required ></td></tr>
-						<tr><td><font color="#FF0004">Password: </font></td><td><input type="password" name= "password" required ></td></tr>
+						<tr><td><font color="#FFFFFF">Student ID: </font></td><td><input type="text" name= "studID" required ></td></tr>
+						<tr><td><font color="#FFFFFF">Password: </font></td><td><input type="password" name= "password" required ></td></tr>
 						<tr><td colspan = "2" align ="right"><input type ="submit" value="Log In"></td></tr>
 					</table>
 				</form>	

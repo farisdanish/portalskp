@@ -24,13 +24,6 @@
 
 <!DOCTYPE html>
 <html>
-	<style>
-			body 
-			{
-			  background-image: url("background.jpg");
-			  background-repeat: no-repeat;
-			}
-	</style>
 	<head>
 		<title>Admin Log In</title>
 		<link rel="stylesheet" type="text/css" href="css/loginstyle.css">
@@ -50,8 +43,8 @@
 				
 				<form action="adminlogin.php" method="POST">
 					<table align="center">
-						<tr><td><font color="#FF0004">Username&nbsp;: </font></td><td><input type="text" name= "username" required ></td></tr>
-						<tr><td><font color="#FF0004">Password&nbsp;: </font></td><td><input type="password" name= "password" required ></td></tr>
+						<tr><td><font color="#FFFFFF">Username&nbsp;: </font></td><td><input type="text" name= "username" required ></td></tr>
+						<tr><td><font color="#FFFFFF">Password&nbsp;: </font></td><td><input type="password" name= "password" required ></td></tr>
 						<tr><td colspan = "2" align ="right"><input type ="submit" value="Log In"></td></tr>
 					</table>
 				</form>	
