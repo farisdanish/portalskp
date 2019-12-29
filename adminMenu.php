@@ -12,8 +12,11 @@ if (! empty($_SESSION['logged_in']))
 			}
 			body 
 			{
-			  background-image: url("background1.jpg");
-			  background-repeat: no-repeat;
+			  margin: 0;
+			  padding: 0;
+	          background:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url("background1.jpg") no-repeat center center fixed;
+	          background-size: cover;
+	          min-height: 100%;
 			}
 		</style>
 		<head>
