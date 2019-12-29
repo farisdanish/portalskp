@@ -5,7 +5,7 @@
     		$studID = $_POST['studID'];
 			$password = $_POST['password'];
 			
-    		$sql = "SELECT * FROM admin WHERE stud_id='$studID' and password='$password'";
+    		$sql = "SELECT * FROM student WHERE stud_id='$studID' and password='$password'";
     		$query = $conn -> query($sql);
 			$row = $query -> fetch_assoc();
 			$num = $query -> num_rows;
