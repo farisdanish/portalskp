@@ -18,9 +18,14 @@
 	<title>Application List - ADMIN</title>
 	<style type="text/css" media="all">
 		@import url("bootstrap/css/bootstrap.css");
+	#background2{
+		background-size: 1400px 800px;
+		background-repeat: no-repeat;
+		background-color: #FFFAF0;
+		}
 	</style>
 </head>
-<body>
+<body id="background2">
 	<div align="center">
 		<h1 style="background-color:lightgreen; font-weight: bold;" align="center">SKP APPLICATION LIST<hr></h1>
 		<br>
@@ -57,17 +62,17 @@
 										}
 								?>
 							</td>
-							<td align="center"><a href="appdetails.php?id=<?php echo $row['stud_id']; ?>"class="btn btn-primary btn-sm">Expand</a></td>
+							<td align="center"><a href="appdetails.php?id=<?php echo $row['stud_id']; ?>"class="btn btn-success btn-sm">Expand</a></td>
 							<td align="center"><a href = "deleteApp.php?application_id=<?php echo $row['application_id'];?>"onclick="return check()" class="btn btn-danger btn-sm">Delete</a></td>
 						<?php } while($row = $query -> fetch_assoc()) 	
 							?>
-					<tr><td colspan = "5" align ="center"><a href ="adminMenu.php"><button class="btn btn-secondary btn-sm">BACK</button></td></tr>
+					<tr><td colspan = "5" align ="center"><a href ="adminMenu.php"><button class="btn btn-danger btn-sm">BACK</button></td></tr>
 					</table>
 				</div>
 				<script>
 			function check() {
 				//function confirm() will produce an alert box which will reeturn true or false
-				var choice = confirm ("Are you sure you want to remove this Student?");
+				var choice = confirm ("Are you sure you want to remove this applicant?");
 				if(choice == true){
 					return true;}
 				else {return false;}

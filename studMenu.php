@@ -1,9 +1,12 @@
-<?php
+<?php include 'connection.php';
 session_start();
 if (! empty($_SESSION['logged_in']))
 {
 	$id = $_SESSION['id'];
 	$_SESSION['id']=$id;
+	$sql = "SELECT * FROM student WHERE stud_id = '$_SESSION[id]' ";
+	$query = $conn -> query($sql) or die($conn->error);//to display error in connection to database(if any)
+	$row = $query -> fetch_assoc();
 ?>
 <html>
 	<style>
@@ -32,6 +35,7 @@ if (! empty($_SESSION['logged_in']))
   						<div class="card-header"><font color="#000000"><b>STUDENT MENU</b></font></div>
   				<div class="card-body">
 				<legend><font color="#000000">PLEASE CHOOSE</font></legend>
+					<p><font color="#000000"><?php echo $row['stud_id'] ?></font></p>
 					<table align="center">
 					<tr>
 						<td colspan = "5" align ="right"><a href ="addapplicant.php"><button class="btn btn-primary btn-sm">Insert Application</button></td>

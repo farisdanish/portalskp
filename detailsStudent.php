@@ -73,8 +73,17 @@
 				<tr><td></td><td>Application Status : <?php echo $row['application_status']?></td></tr>
 				</table>
 			</form>
+				<script>
+				function check() {
+				//function confirm() will produce an alert box which will reeturn true or false
+				var choice = confirm ("Are you sure you want to remove this applicant?");
+				if(choice == true){
+					return true;}
+				else {return false;}
+			}
+				</script>
 			<table name="temp" class="table table-sm table-bordered table table-striped table-hover table-condensed" align="center">
-				<tr><td align ="center"><a href ="studMenu.php"><button class="btn btn-danger btn-sm">BACK</button></td></tr>
+				<tr><td><a href = "deleteAppStud.php?application_id=<?php echo $row['application_id'];?>"onclick="return check()" class="btn btn-danger btn-sm">Delete</a></td><td align ="center"><a href ="studMenu.php"><button class="btn btn-danger btn-sm">BACK</button></td></tr>
 			</table>
 		</body>
 	</html>
