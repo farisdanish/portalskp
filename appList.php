@@ -57,11 +57,11 @@
 										}
 								?>
 							</td>
-							<td align="center"><a href="appdetails.php?id=<?php echo $row['stud_id']; ?>"class="btn btn-success btn-sm">Expand</a></td>
+							<td align="center"><a href="appdetails.php?id=<?php echo $row['stud_id']; ?>"class="btn btn-primary btn-sm">Expand</a></td>
 							<td align="center"><a href = "deleteApp.php?application_id=<?php echo $row['application_id'];?>"onclick="return check()" class="btn btn-danger btn-sm">Delete</a></td>
 						<?php } while($row = $query -> fetch_assoc()) 	
 							?>
-					<tr><td colspan = "5" align ="center"><a href ="adminMenu.php"><button class="btn btn-danger btn-sm">BACK</button></td></tr>
+					<tr><td colspan = "5" align ="center"><a href ="adminMenu.php"><button class="btn btn-secondary btn-sm">BACK</button></td></tr>
 					</table>
 				</div>
 				<script>

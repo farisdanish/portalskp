@@ -71,14 +71,14 @@
 					</td>
 				</tr>
 					
-				<tr><td align = "right"><input type = "submit" class = "btn btn-success btn sm" value="Update"></td>
+				<tr><td align = "right"><input type="Submit" value="Update" class="btn btn-primary"></td>
 					
 				</tr>
 				<input type="hidden" name="id" value="<?php echo $id;?>">
 				</table>
 			</form>
 			<table name="temp" class="table table-sm table-bordered table table-striped table-hover table-condensed" align="center">
-				<tr><td align ="center"><a href ="appList.php"><button class="btn btn-danger btn-sm">BACK</button></a></td></tr>
+				<tr><td align ="center"><a href ="appList.php"><button class="btn btn-secondary btn-sm">BACK</button></a></td></tr>
 			</table>
 		</body>
 	</html>

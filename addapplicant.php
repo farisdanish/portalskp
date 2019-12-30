@@ -85,6 +85,7 @@ if (! empty($_SESSION['logged_in']))
 	</script>
 <head>
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="all">
+	<title>Create Application - STUDENT</title>
 </head>
 	<body>
 		<?php
@@ -157,9 +158,8 @@ if (! empty($_SESSION['logged_in']))
 				<tr><td>Work Experience: </td><td><input type="textarea" name="work_exp" placeholder="Where,Position,Duration"></td></tr>
 				<tr><td>Agreement: </td><td><input type="checkbox" name="agreement" required></td></tr>
 				
-				<tr><td colspan="2" align="right"><input type="Submit" value="Submit"><td></tr>
-				<tr><td colspan="2" align="right"><a href="studMenu.php">Back</a>&nbsp &nbsp
-				<a href="studlogout.php">Logout</a></td></tr>
+				<tr><td colspan="2" align="right"><input type="Submit" value="Submit" class="btn btn-success"><td>
+				<td colspan="2"><a href="studMenu.php"><button type="button" class="btn btn-secondary">Back</button></a></td></tr>
 				</table>
 			</form>
 		</div>

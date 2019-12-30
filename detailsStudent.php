@@ -33,7 +33,16 @@
 		
 			<div align= "center">
 			<h1 style="background-color:lightblue; font-weight: bold;" align="center">Your Application Details<hr></h1>
-				
+			<?php
+			$sqlid = "SELECT * FROM student JOIN application WHERE application.stud_id = '$stud_id' AND student.stud_id = '$stud_id'";
+			$queryid = $conn -> query($sqlid) or die($conn->error);
+			$numid = $queryid -> fetch_assoc();
+	
+			if($numid==0){
+				echo "<script>alert('You have not made an application yet!!');
+				window.location='studMenu.php';</script>";
+			}else
+			?>
 			<form>	
 			<table cellpadding="5">
 				<tr>

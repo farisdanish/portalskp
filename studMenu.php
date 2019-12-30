@@ -34,7 +34,7 @@ if (! empty($_SESSION['logged_in']))
 				<legend><font color="#000000">PLEASE CHOOSE</font></legend>
 					<table align="center">
 					<tr>
-						<td colspan = "5" align ="right"><a href ="addapplicant.php"><button class="btn btn-success btn-sm">Insert Application</button></td>
+						<td colspan = "5" align ="right"><a href ="addapplicant.php"><button class="btn btn-primary btn-sm">Insert Application</button></td>
 						<td></td>
 					<td colspan = "5" align ="right"><a href ="detailsStudent.php"><button class="btn btn-success btn-sm">View Application's Status</button></td>
 						<td></td>	
