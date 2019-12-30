@@ -1,4 +1,4 @@
-<?php include("connection.php"); ?>
+<?php include("connection.php"); session_start();?>
 <?php
 		if (isset($_POST['studID']) and isset($_POST['password'])){
 			// username and password sent from form
@@ -13,6 +13,7 @@
     		if($num == 1) {
 				session_start();
         		$_SESSION['logged_in'] = true;
+				$_SESSION['id']=$studID;
         		header("Location: studMenu.php");
 			}else {
         		echo "<script>alert('You have entered a wrong username or password!');
